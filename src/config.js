@@ -1,7 +1,7 @@
   const { name } = require("ejs");
   const mongodb=require("mongoose");
   const client=require("mongodb");
-  const url2="mongodb+srv://tamilbillons:joseharrywillam123@cluster0.j5cef10.mongodb.net/movies_data?retryWrites=true&w=majority&Appname=Cluster0"
+  const url2=process.env.mongodburl
   const connect=mongodb.connect(url2)
 
   connect.then(()=>{
